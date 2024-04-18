@@ -14,8 +14,7 @@ int main() {
  
     cin >> a >> b >> c >> d;
  
-    bool res = pow(a, b) > pow(c, d);
-    if (res) {
+    if (pow(a, b) > pow(c, d)) {
         cout << "YES" << endl;
     } else {
         cout << "NO" << endl;
