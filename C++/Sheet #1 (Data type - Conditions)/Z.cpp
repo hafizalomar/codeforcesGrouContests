@@ -10,11 +10,11 @@ using namespace std;
  
 int main() {
  
-    unsigned long long int a, b, c, d;
+    long long int a, b, c, d;
  
     cin >> a >> b >> c >> d;
  
-    if (pow(a, b) > pow(c, d)) {
+    if (b*log(a)> d*log(c)) {
         cout << "YES" << endl;
     } else {
         cout << "NO" << endl;
