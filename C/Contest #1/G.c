@@ -1,27 +1,47 @@
-// #include<stdio.h>
+#include<stdio.h>
 
-// int main()
-// {
-//     long long int n, m, k;
-//     long long int b = 0;
+int main()
+{
+    long long int n, m, k;
+    long long int doll = 0;
 
-//     scanf("%lld %lld %lld", &n, &m, &k);
+    scanf("%lld %lld %lld", &n, &m, &k);
 
-//     if (n >= k && m >= k) {
-//         if (n >= m) {
-//             b = k;
-//         }
-//     } else if (n > m && k > m) {
-//         if (2*n >= k) {
-//             b = k;
-//         } else {
-//             b = k/2;
-//         }
-//     } else if (n =< m && n =< k) {
-//         if ()
-//     }
+
+    if (k > 0) {
+        if (n > 0) {
+            if (m > 0) {
+                if (n >= m && k >= m) {
+                    doll = m;
+                    n -= doll;
+                    k -= doll;
+                    if (k >= n/2) {
+                        doll += n/2;
+                    } else if (k <= n/2) {
+                        doll += k;
+                    }
+                } else if (n >= k && m >= k) {
+                    doll = k;
+                } else if (n <= m && n <= k) {
+                    doll = n;
+                }
+            } else {
+                if (k >= n/2) {
+                    doll = n/2;
+                } else if (k <= n/2) {
+                    doll = k;
+                }
+            }
+        } else {
+            printf("0\n");
+            return 0;
+        }
+    } else {
+        printf("0\n");
+        return 0;
+    }
     
-//     printf("%lld\n", b);
+    printf("%lld\n", doll);
 
-//     return 0;
-// }
+    return 0;
+}

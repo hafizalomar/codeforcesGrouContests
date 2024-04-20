@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<math.h>
 
 int main()
 {
@@ -12,10 +11,8 @@ int main()
         scanf("%d", &array[i]);
     }
 
-    for (int i = 0; i < t; i++) {
-        if (array[i] <= 10) {
-            printf("A[%d] = %d\n", i, array[i]);
-        }
+    for (int i = t-1; i >= 0; i--) {
+        printf("%d ", array[i]);
     }
     printf("\n");
 
