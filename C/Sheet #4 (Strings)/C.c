@@ -7,11 +7,11 @@ int main()
 
     scanf("%s %s", a, b);
 
-    int al, bl;
-    al = strlen(a);
-    bl = strlen(b);
+    int value = strcmp(a, b);
 
-    if (al > bl) {
+    if (value == 0) {
+        printf("%s\n", a);
+    } else if (value > 0) {
         printf("%s\n", b);
     } else {
         printf("%s\n", a);
