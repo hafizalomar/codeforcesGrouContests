@@ -1,29 +1,31 @@
-#include<stdio.h>
-#include<limits.h>
+#include <stdio.h>
+#include <limits.h>
 
 int main()
 {
-    int n, x;
-    scanf("%d %d", &n, &x);
+    int n, k;
+    scanf("%d %d", &n, &k);
 
     int temp = INT_MAX;
+    int groupCount = 0;
 
     for (int i = 0; i < n; i++)
-    {    
-        int k = 1;
-        if (k <= x) {
-            int t;
-            scanf("%d", &t);
-            if (t < temp) {
-                temp = t;
-                k++;
-            }
+    {
+        int num;
+        scanf("%d", &num);
+
+        if (num < temp)
+        {
+            temp = num;
         }
-        if (k == x) {
+
+        groupCount++;
+        if (groupCount == k || i == n - 1)
+        {
             printf("%d ", temp);
-            k = 1;
+            temp = INT_MAX; 
+            groupCount = 0; 
         }
-        
     }
 
     return 0;

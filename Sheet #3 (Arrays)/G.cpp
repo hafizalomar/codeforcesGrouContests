@@ -1,13 +1,15 @@
-#include<stdio.h>
+#include<iostream>
+
+using namespace std;
 
 int main()
 {
     int n;
-    scanf("%d", &n);
+    cin >> n;
     int a[n];
     
     for (int i = 0; i < n; i++) {
-        scanf("%d", &a[i]);
+        cin >> a[i];
     }
     int count = 0;
     for (int i = 0; i < n/2; i++) {
@@ -17,9 +19,9 @@ int main()
     }
 
     if (count == n/2) {
-        printf("YES\n");
+        cout << "YES" << endl;
     } else {
-        printf("NO\n");
+        cout << "NO" << endl;
     }
     
     return 0;
