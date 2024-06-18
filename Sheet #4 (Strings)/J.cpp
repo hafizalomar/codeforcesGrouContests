@@ -1,13 +1,14 @@
-#include<stdio.h>
-#include<string.h>
+#include<bits/stdc++.h>
+
+using namespace std;
 
 int main()
 {
     char c;
 
-    int count[26] = {0};
+    vector<int> count(26, 0);
 
-    while (scanf("%c", &c) != EOF)
+    while (cin >> c)
     {
         count[c-'a']++;
     }
